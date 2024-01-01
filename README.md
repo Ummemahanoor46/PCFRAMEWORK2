@@ -1,8 +1,5 @@
 # PCFRAMEWORK2
 
-# PCFRAMEWORK1
-
-
 # qa-automation-tests
 This will be CucumberBDD Framework which will be capable of testing UI, API, db and More. It will use Java, TestNG, Gherkin and generate JVM Report
 
