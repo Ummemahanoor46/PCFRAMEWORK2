@@ -24,9 +24,9 @@ Cucumber IO, Gherkin, Selenium WebDriver, Maven, TestNG, JVM Cucumber Report, Gi
 
 # RUN OPTIONS
 1. Clone the project
-2. To run in parallel use command: mvn clean verify -Denv=stage -Dbrowser=ch -Dcucumber.filter.tags="@test"
+2. To run in parallel use command: mvn clean verify -Denv=qa -Dbrowser=chrome -Dcucumber.filter.tags="@smoke"
 3. To run in single use flag -Dthreads=single; mvn clean verify -Dthreads=single
-4. To exclude a specific tag use 'not' with tag name i.e. mvn clean verify -Denv=stage -Dbrowser=ch -Dcucumber.filter.tags="not @ignore"
+4. To exclude a specific tag use 'not' with tag name i.e. mvn clean verify -Denv=qa -Dbrowser=chrome -Dcucumber.filter.tags="not @ignore"
 5. To post results to JIRA use flag -DPostResultsToJira=true
 
 # Execute NE Test
