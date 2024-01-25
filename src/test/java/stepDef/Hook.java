@@ -5,14 +5,16 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hook extends Config {
-    // QA : http://www.qa.taltektc.com
-    // STAGE : http://www.stage.taltektc.com
-    // PROD : http://www.prod.taltektc.com
-
     public static String url;
-    public String driverType = System.getProperty("browser");
-    public String envType = System.getProperty("env");
+    public static String driverType = System.getProperty("browser");
+    public  static String envType = System.getProperty("env");
     @Before
+    //start db connection
+    //setup url:
+        // QA : http://www.qa.taltektc.com
+        // STAGE : http://www.stage.taltektc.com
+        // PROD : http://www.prod.taltektc.com
+    //open browser
     public void beforeEachTest(){
 
         driver = setupBrowser(driverType);
@@ -30,7 +32,10 @@ public class Hook extends Config {
       driver.get(url);
     }
     @After
-
+    //close browser
+    //quit browser
+    //take screenshot if the test steps or case fail
+    //close db connection
     public void afterEachTest(){
         driver.quit();
     }
