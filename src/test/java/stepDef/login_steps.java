@@ -113,4 +113,9 @@ public class login_steps {
     @Then("the user should be able to reset the password")
     public void theUserShouldBeAbleToResetThePassword() {
     }
+
+    @When("user clicks on login button")
+    public void userClicksOnLoginButton() {
+
+    }
 }
