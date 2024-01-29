@@ -2,52 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
-  <artifactId>PCFRAMEWORK2</artifactId>
+  <groupId>org.talentTEK</groupId>
+  <artifactId>CucumberFW_ONSITE_DEC23</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
 
-  <name>PCFRAMEWORK2</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-    <!-- cucumber java -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>7.15.0</version>
-    </dependency>
-    <!-- cucumber-picocontainer -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-picocontainer</artifactId>
-      <version>7.15.0</version>
-    </dependency>
-    <!-- cucumber-testng -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-testng</artifactId>
-      <version>7.11.1</version>
-    </dependency>
-    <!-- javafaker -->
-    <dependency>
-      <groupId>com.github.javafaker</groupId>
-      <artifactId>javafaker</artifactId>
-      <version>1.0.2</version>
-    </dependency>
-    <!-- selenium-java -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.11.0</version>
-    </dependency>
-  </dependencies>
-
-  <!--   Reporting TBD   -->
   <build>
     <plugins>
       <plugin>
@@ -62,7 +20,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M9</version>
+        <version>3.0.0-M6</version>
         <configuration>
           <testFailureIgnore>true</testFailureIgnore>
           <parallel>methods</parallel>
@@ -81,7 +39,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>PCFRAMEWORK2</projectName>
+              <projectName>CucumberFW_ONSITE_DEC23</projectName>
               <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
             </configuration>
           </execution>
@@ -89,4 +47,40 @@
       </plugin>
     </plugins>
   </build>
+
+
+  <packaging>jar</packaging>
+
+  <name>CucumberFW_ONSITE_DEC23</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>7.15.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.15.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.16.1</version>
+    </dependency>
+
+
+
+  </dependencies>
+
+
 </project>
